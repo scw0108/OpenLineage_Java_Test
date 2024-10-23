@@ -91,5 +91,6 @@ When SQL is executed, OpenLineage data is created and sent to the Marquez websit
 - Input Name: `openlineage_test`
 - Input Namespace: `openlineage.details`
 #### Demonstrate Data Lineage
+<img width="1321" alt="Marquez web" src="https://github.com/user-attachments/assets/265d3055-35f7-4dbc-8796-36482eb8e6a5">
 
 
