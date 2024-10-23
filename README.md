@@ -67,4 +67,29 @@ The database has two tables: `owner` and `detaila`.
 - first_name: VARCHAR(255)
 - last_name: VARCHAR(255)
 - interest: VARCHAR(255)
+### Process
+When SQL is executed, OpenLineage data is created and sent to the Marquez website.
+#### OpenLineage Data
+##### Create Owner
+- Job Name: `create_owner`
+- Job Namespace: `openlineage_test`
+- Output Name: `openlineage_test`
+- Output Namespace: `openlineage.owners`
+#### Query Owner
+- Job Name: `query_owner`
+- Job Namespace: `openlineage_test`
+- Input Name: `openlineage_test`
+- Input Namespace: `openlineage.owners`
+#### Create Detail
+- Job Name: `create_detail`
+- Job Namespace: `openlineage_test`
+- Output Name: `openlineage_test`
+- Output Namespace: `openlineage.details`
+#### Query Detail
+- Job Name: `query_detail`
+- Job Namespace: `openlineage_test`
+- Input Name: `openlineage_test`
+- Input Namespace: `openlineage.details`
+#### Demonstrate Data Lineage
+
 
