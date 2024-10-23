@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Details</title>
+</head>
+<body>
+<div th:if="${owner == null}">
+    <p>No owner found with the specified ID.</p>
+</div>
+<div th:if="${owner != null}">
+    <h1>Owner Details</h1>
+    <p>ID: <span th:text="${owner.id}">ID</span></p>
+    <p>First Name: <span th:text="${owner.firstName}">First Name</span></p>
+    <p>Last Name: <span th:text="${owner.lastName}">Last Name</span></p>
+    <p>Address: <span th:text="${owner.address}">Address</span></p>
+    <p>City: <span th:text="${owner.city}">City</span></p>
+    <p>Telephone: <span th:text="${owner.telephone}">Telephone</span></p>
+</div>
+
+    <a href="/owners/query">Back to Search</a>
+</body>
+</html>

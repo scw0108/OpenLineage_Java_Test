@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Details</title>
+</head>
+<body>
+<div th:if="${detail == null}">
+    <p>No owner found with the specified ID.</p>
+</div>
+<div th:if="${detail != null}">
+    <h1>Owner Details</h1>
+    <p>ID: <span th:text="${detail.id}">ID</span></p>
+    <p>First Name: <span th:text="${detail.firstName}">First Name</span></p>
+    <p>Last Name: <span th:text="${detail.lastName}">Last Name</span></p>
+    <p>Interest: <span th:text="${detail.interest}">Interest</span></p>
+</div>
+    <a href="/details/query">Back to Search</a>
+</body>
+</html>

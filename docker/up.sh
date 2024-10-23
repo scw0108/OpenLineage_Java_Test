@@ -61,7 +61,7 @@ cd "${project_root}/"
 compose_files="-f docker-compose.yml"
 
 # Default args
-API_PORT=5000
+API_PORT=5002
 API_ADMIN_PORT=5001
 WEB_PORT=3000
 POSTGRES_PORT=5432
