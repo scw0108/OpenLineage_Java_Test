@@ -1,6 +1,6 @@
 # OpenLineage Java Test
 ## Overview
-This project is a Java application that uses Spring Boot and MySQL. It is containerized using Docker and Docker Compose. The project integrates with the Marquez project to send OpenLineage data to the Marquez website. Additionally, it retains the original official demo to provide a complete example of Data Lineage.
+This project is a Java application that uses Spring Boot, MySQL and [OpenLineage](https://openlineage.io/). It is containerized using Docker and Docker Compose. The project integrates with the [Marquez project](https://github.com/MarquezProject/marquez) to send OpenLineage data to the Marquez website. Additionally, it retains the original official demo to provide a complete example of Data Lineage.
 ## Prerequisites
 - Docker
 - Docker Compose
