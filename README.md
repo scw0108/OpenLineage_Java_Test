@@ -37,5 +37,34 @@ $ cd .. $$ ./docker/up.sh
 ```bash
 $ cd .. $$ ./docker/up.sh --seed
 ```
+### Access the Application
+```angular2html
+http://localhost:8080
+```
+### Access the Marquez Website
+```angular2html
+http://localhost:3000
+```
+## Application Introduction
+The application is a simple Spring Boot application that uses MySQL to store data and create OpenLineage data.
+### Function
+1. Create a new owner
+2. Query a onwer
+3. Create onwer's detail information
+4. Query onwer's detail information
+### Database
+The database has two tables: `owner` and `detaila`.
+1. Owners Table:  
+- id: INT(4) UNSIGNED, NOT NULL, AUTO_INCREMENT, PRIMARY KEY
+- first_name: VARCHAR(255)
+- last_name: VARCHAR(255)
+- address: VARCHAR(255)
+- city: VARCHAR(255)
+- telephone: VARCHAR(255)
 
+2. Details Table:
+- id: INT(4) UNSIGNED, NOT NULL, PRIMARY KEY, FOREIGN KEY REFERENCES owners(id)
+- first_name: VARCHAR(255)
+- last_name: VARCHAR(255)
+- interest: VARCHAR(255)
 
