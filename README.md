@@ -8,7 +8,7 @@ This project is a Java application that uses Spring Boot, MySQL and [OpenLineage
 ## Setup
 ###  Clone the repository
 ```bash
-$ git https://github.com/scw0108/OpenLineage_Java_Test.git && cd OpenLineage_Java_Test
+$ git clone https://github.com/scw0108/OpenLineage_Java_Test.git && cd OpenLineage_Java_Test
 ```
 ### Environment Variables
 Create a `.env` file in the root directory and add the following environment variables:
