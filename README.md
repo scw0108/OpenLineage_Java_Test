@@ -5,6 +5,11 @@ This project is a Java application that uses Spring Boot, MySQL and [OpenLineage
 - Docker
 - Docker Compose
 - Java 11 or higher
+- OpenLineage
+- Marquez
+- MySQL
+- Spring Boot
+- etc ...
 ## Setup
 ###  Clone the repository
 ```bash
