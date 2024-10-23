@@ -15,7 +15,7 @@ Create a `.env` file in the root directory and add the following environment var
 ```bash
 DB_USER
 ROOT_PASSWORD
-DATABASE_NAME
+DATABASE_NAME= openlineage
 DB_PASSSWORD
 ````
 
