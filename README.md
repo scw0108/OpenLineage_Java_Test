@@ -12,11 +12,11 @@ $ git clone https://github.com/scw0108/OpenLineage_Java_Test.git && cd OpenLinea
 ```
 ### Environment Variables
 Create a `.env` file in the root directory and add the following environment variables:
-```bash
-DB_USER
-ROOT_PASSWORD
-DATABASE_NAME= openlineage
-DB_PASSSWORD
+```.env
+DB_USER=xxx
+ROOT_PASSWORD=xxx
+DATABASE_NAME=openlineage
+DB_PASSSWORD=xxx
 ````
 
 ### Build the Spring Boot Image
