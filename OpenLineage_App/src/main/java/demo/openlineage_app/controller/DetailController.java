@@ -20,6 +20,8 @@ public class DetailController {
     public String details() {
         return "details/create";
     }
+
+    // Create a new detail object with the given id and interest
     @PostMapping("/details")
     public String createDetail(@RequestParam("id") int id, @RequestParam("interest") String interest) {
         detailService.createDetail(id, interest);
@@ -31,6 +33,7 @@ public class DetailController {
         return "details/query";
     }
 
+    // Find the details of a given id
     @PostMapping("/details/query")
     public String queryDetails(@RequestParam("id") int id, Model model) {
         Detail detail = detailService.findDetailsById(id);

@@ -25,6 +25,7 @@ public class DetailService {
     }
 
     public void createDetail(int id, String interest) {
+        // Create a new detail object with the given id and interest
         Owner owner = ownerService.findOwnerById(id);
         Detail detail = new Detail();
         detail.setOwner(owner);
@@ -32,6 +33,7 @@ public class DetailService {
         detail.setLastName(owner.getLastName());
         detail.setInterest(interest);
 
+        // Create a new OpenLineageClient object
         OpenLineageClient client = olservice.openLineageClient();
         olservice.setJobName("creat_detail");
         olservice.setQuery("INSERT INTO details (id, first_name, last_name, interest)");
@@ -40,22 +42,32 @@ public class DetailService {
         olservice.setOutputNamespace("openlineage_test");
         olservice.setOutputName("openlineage.details");
 
+        //Create a START event
         OpenLineage.RunEvent event = olservice.createEvent(OpenLineage.RunEvent.EventType.START, null, true, true);
         client.emit(event);
+
         detailRepository.save(detail);
+
+        //Create a COMPLETE event
         event = olservice.createEvent(OpenLineage.RunEvent.EventType.COMPLETE, event.getRun().getRunId(), true, true);
         client.emit(event);
     }
 
     public Detail findDetailsById(int id) {
+        // Create a new OpenLineageClient object
         OpenLineageClient client = olservice.openLineageClient();
         olservice.setJobName("query_detail");
         olservice.setQuery("SELECT * FROM details WHERE id = c");
         olservice.setInputNamespace("openlineage_test");
         olservice.setInputName("openlineage.details");
+
+        //Create a START event
         OpenLineage.RunEvent event = olservice.createEvent(OpenLineage.RunEvent.EventType.START, null, true, false);
         client.emit(event);
+
         Detail result = detailRepository.findById(id).orElse(null);
+
+        //Create a COMPLETE event
         event = olservice.createEvent(OpenLineage.RunEvent.EventType.COMPLETE, event.getRun().getRunId(), true, false);
         client.emit(event);
         return result;

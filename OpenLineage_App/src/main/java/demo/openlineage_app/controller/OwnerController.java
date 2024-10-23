@@ -20,6 +20,8 @@ public class OwnerController {
     public String owners() {
         return "owners/create";
     }
+
+    // Create a new owner object with the given details
     @PostMapping("/owners")
     public String createOwner(@ModelAttribute Owner owner) {
 
@@ -32,6 +34,7 @@ public class OwnerController {
         return "owners/query";
     }
 
+    // Find the owner of a given id
     @PostMapping("/owners/query")
     public String queryOwners(@RequestParam("id") int id, Model model) {
         Owner owner = ownerService.findOwnerById(id);

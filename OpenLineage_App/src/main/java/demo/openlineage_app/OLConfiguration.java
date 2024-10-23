@@ -12,8 +12,10 @@ import java.util.Map;
 @Configuration
 public class OLConfiguration {
 
+
     @Bean
     public OpenLineageService openLineageService_owner() {
+        // Create a map of column names to their respective data types
         Map<String, String> data = new HashMap<>();
         data.put("id", "INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY");
         data.put("first_name", "VARCHAR(255)");
@@ -21,6 +23,7 @@ public class OLConfiguration {
         data.put("address", "VARCHAR(255)");
         data.put("city", "VARCHAR(255)");
         data.put("telephone", "VARCHAR(255)");
+        // Create a new OpenLineageService object with the given data
         return new OpenLineageService(
                 "openlineage_test",
                 "roleValue",

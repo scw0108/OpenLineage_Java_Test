@@ -25,6 +25,7 @@ public class OpenLineageService {
     private final String role;
     private final Map<String, String> data;
 
+    // Constructor for OpenLineageService
     public OpenLineageService(String jobNamespace, String role, Map<String, String> data) {
         this.jobName = null;
         this.jobNamespace = jobNamespace;
@@ -36,6 +37,7 @@ public class OpenLineageService {
         this.role = role;
         this.data = data;
     }
+    // Method to create OpenLineageClient
     public OpenLineageClient openLineageClient() {
         return   OpenLineageClient.builder()
                 .transport(
